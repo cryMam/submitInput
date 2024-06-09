@@ -1,0 +1,113 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dataInputContainer {
+  position: absolute;
+  top: calc(50% - 13px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background: var(--block-ground-color);
+  border-radius: 12px;
+}
+.dataInputContainerActive {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.dataInputBox {
+  position: relative;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  border: 1px solid var(--error-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  width: fit-content;
+}
+.dataInputBoxActive {
+  border: 1px solid var(--accent-color);
+}
+.dataInputBoxActive input {
+  width: 140px;
+  transition: width 0.2s linear;
+}
+.valueBox {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  width: fit-content;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.valueBoxActive {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.valueLine {
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.valueLine:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
+.dataInput {
+  width: 70px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-size: 10px;
+  font-family: Poppins;
+  outline: none;
+  transition: width 0.2s linear;
+  color: var(--primary-text-color);
+}
+.dataInput::placeholder {
+  font-style: italic;
+}
+
+.activeIconsBox {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.inactiveIcon {
+  width: 14px;
+  height: auto;
+  color: var(--error-color);
+  flex-shrink: 0;
+}
+.activeIcon {
+  width: 14px;
+  height: auto;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.confirmIcon path:first-child {
+  fill: var(--accent-color);
+}
+.removeIcon path {
+  fill: var(--error-color);
+}
+.loaderBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(211, 216, 217, 0.5);
+  border-radius: 12px;
+  top: calc(50% - 13px);
+}
